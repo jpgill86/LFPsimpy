@@ -51,7 +51,7 @@ class LfpElectrode:
 
         # Load the dummy class
         dir = os.path.abspath(os.path.dirname(__file__))
-        h.load_file(os.path.join(dir, 'LFPsimpy.hoc'))
+        h.load_file(os.path.join(dir, 'LFPsimpy.hoc').replace('\\', '/'))
 
         # Initialize it - value is updated in compute()
         self.nrn_value_tracker = h.LfpElectrode()
